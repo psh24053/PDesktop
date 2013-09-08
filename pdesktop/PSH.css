@@ -12,6 +12,11 @@ html,body{
 	position: relative;
 	z-index: 0;
 }
+.PDesktop .PDesktop_AppList{
+	padding: 0;
+	margin: 0;
+	
+}
 .PTitleBar{
 	width: 100%;
 	position: absolute;

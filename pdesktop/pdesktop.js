@@ -353,7 +353,10 @@ function PDesktop(config){
 	// noconfig，增加不参与config的属性
 	this.noconfig.push('type');
 	
-	
+	/**
+	 * app列表jqdom
+	 */
+	this.applistjqdom = $('<div>');
 	
 	/**
 	 * 绘制Pdesktop
@@ -362,9 +365,15 @@ function PDesktop(config){
 		this.jqdom = $('<div>').css({
 			background: 'url("'+this.imageDir+'/'+this.defaultImage+'")'
 		});
-		
+		this.initAppList();
 		
 		return this.jqdom;
+	};
+	
+	this.initAppList = function(){
+		this.applistjqdom.addClass('PDesktop_AppList');
+		
+		
 	};
 	
 	// 初始化PApplication类
